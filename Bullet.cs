@@ -5,12 +5,8 @@ public class Bullet : MonoBehaviour {
 
 	public float bulletSpeed;
 
-	void Start() {
-		bulletSpeed = 50;
-	}
-
 	void Update () {
-		transform.Translate (Vector3.forward * Time.deltaTime * bulletSpeed, Space.World);
+		transform.Translate (Vector3.forward * bulletSpeed * Time.deltaTime);
 		StartCoroutine ("Wait");
 	}
 
