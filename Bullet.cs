@@ -22,7 +22,7 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter(Collider collider) {
 		if (collider.transform.tag == "Plane") {
 			Debug.Log ("Plane hit!");
+			Destroy(gameObject);
 		}
-		Destroy (gameObject);
 	}
 }
